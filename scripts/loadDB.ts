@@ -60,7 +60,7 @@ const loadSampleData = async () => {
       const embedding = await openai.embeddings.create({
         model: "text-embedding-3-small",
         input: chunk,
-        encoding_format: "base64",
+        encoding_format: "float",
       });
 
       const vector = embedding.data[0].embedding;
